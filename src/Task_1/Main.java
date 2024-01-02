@@ -1,16 +1,21 @@
 package Task_1;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        Product[] products = new Product[3];
+        Scanner scanner = new Scanner(System.in);
 
-        products[0] = new Toy("Лего", 50.99, "діти до 10 років");
-        products[1] = new DairyProduct("Молоко", 2.49, "01.01.2024");
-        products[2] = new RegularProduct("Книга", 20.00, "Література");
+        // Введення даних
+        Detail[] details = new Detail[3];
+        details[0] = new Mechanism("Engine", 5);
+        details[1] = new Product("Smartphone", 500.0);
+        details[2] = new Node("Sensor", "Proximity");
 
-        for (Product product : products) {
-            product.show();
-            System.out.println("------------");
+        // Виведення даних
+        for (Detail detail : details) {
+            detail.show();
+            System.out.println("-------------------------");
         }
     }
 }
